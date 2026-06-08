@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import InteractiveDots from "@/components/ui/dots-pattern";
+import { Hero } from "@/components/blocks/hero";
 import { Sun, Moon, Search, Sparkles, Copy, RefreshCw, BookOpen, Check, AlertTriangle } from "lucide-react";
 
 type Theme = "dark" | "light";
@@ -256,17 +257,24 @@ export default function Home() {
       <div style={{ maxWidth: 780, margin: "0 auto", padding: "0 24px", position: "relative", zIndex: 1 }}>
 
         {/* Hero */}
-        <div style={{ textAlign: "center", padding: "72px 0 52px" }}>
+        <div style={{ textAlign: "center", padding: "72px 0 20px" }}>
           <div style={{ fontFamily: "'DM Mono', monospace", fontSize: 14, fontWeight: 900, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C8A03F", marginBottom: 18 }}>
             ✦ Literary Taste Analyzer ✦
           </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(52px, 10vw, 96px)", fontWeight: 900, lineHeight: 0.9, letterSpacing: "-0.03em" }}>
-            Shelf<span style={{ color: "#C8A03F", fontStyle: "italic", display: "block" }}>Esteem</span>
-          </h1>
-          <p style={{ fontSize: 16, color: c.textMuted, marginTop: 20, lineHeight: 1.65, maxWidth: 380, marginLeft: "auto", marginRight: "auto" }}>
-            Tell us what's on your book shelf.  We'll handle your esteem  ;)
-          </p>
         </div>
+        <Hero
+          heroTitle={
+            <>
+              Shelf<span style={{ color: "#C8A03F", fontStyle: "italic", display: "block" }}>Esteem</span>
+            </>
+          }
+          subtitle="Tell us what's on your book shelf. We'll handle your esteem ;)"
+          gradient={false}
+          blur={false}
+          className="min-h-0 py-0 -translate-y-10"
+          titleClassName="font-['Playfair_Display']"
+          subtitleClassName={dark ? "text-white/50" : "text-black/50"}
+        />
 
         {/* Search */}
         <div style={{ position: "relative", marginBottom: 36 }}>

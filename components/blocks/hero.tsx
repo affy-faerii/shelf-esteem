@@ -15,7 +15,7 @@ interface HeroAction {
 interface HeroProps extends React.HTMLAttributes<HTMLElement> {
   gradient?: boolean;
   blur?: boolean;
-  title: React.ReactNode;
+  heroTitle: React.ReactNode;
   subtitle?: string;
   actions?: HeroAction[];
   titleClassName?: string;
@@ -24,7 +24,7 @@ interface HeroProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const Hero = React.forwardRef<HTMLElement, HeroProps>(
-  ({ className, gradient = true, blur = true, title, subtitle, actions, titleClassName, subtitleClassName, actionsClassName, ...props }, ref) => {
+  ({ className, gradient = true, blur = true, heroTitle, subtitle, actions, titleClassName, subtitleClassName, actionsClassName, ...props }, ref) => {
     return (
       <section
         ref={ref}
@@ -57,7 +57,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
         >
           <div className="flex flex-col items-center text-center space-y-4">
             <h1 className={cn("text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight", titleClassName)}>
-              {title}
+              {heroTitle}
             </h1>
             {subtitle && (
               <p className={cn("text-xl text-white/50", subtitleClassName)}>{subtitle}</p>
