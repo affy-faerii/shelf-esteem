@@ -410,7 +410,7 @@ export default function Home() {
     borderRadius: 18,
     padding: "36px 42px",
     fontFamily: "'Playfair Display', serif",
-    fontSize: 24,
+    fontSize: 20,
     lineHeight: 1.8,
     fontWeight: 500,
     color: c.text,

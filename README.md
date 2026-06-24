@@ -22,14 +22,6 @@ Because your bookshelf says more about you than your résumé ever could.
 
 ---
 
-## 🖼 Preview
-
-Ever wondered what a sarcastic librarian with access to your Goodreads history would say about you?
-
-Wonder no more.
-
----
-
 ## 🛠 Tech Stack
 
 ### Frontend
@@ -43,7 +35,7 @@ Wonder no more.
 
 ### APIs
 
-* Qwen3-32B (via Groq API)
+* llama-3.3-70b-versatile (via Groq API)
 * Google Books API
 
 ### Deployment
@@ -107,7 +99,7 @@ shelf-esteem/
 ## 🧠 How It Works
 
 1. Search and add books to your shelf.
-2. Shelf Esteem sends your reading choices to DeepSeek.
+2. Shelf Esteem sends your reading choices to Illama.
 3. The Oracle interprets your literary tendencies.
 4. Receive:
 
